@@ -11,7 +11,23 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-ReactDOM.render(
-    <h1>Привет, мир!</h1>,
-    document.getElementById('root')
+const title = "response.potentiallyMaliciousInput";
+const element = (
+    <div>
+      <h1>Здравствуйте!</h1>
+      <h2>Рады вас видеть.</h2>
+      <h3>{title}</h3>;
+    </div>
   );
+
+// Этот код безопасен:
+
+ReactDOM.render(
+    element, 
+    document.getElementById('root')
+);
+
+
+
+
+  
